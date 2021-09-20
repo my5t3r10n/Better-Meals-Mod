@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="MealBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>15</Beauty>
+      <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>10</stackLimit>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>FoodMeals</li>
+    </thingCategories>
+    <alwaysHaulable>true</alwaysHaulable>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <pathCost>14</pathCost>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <uiIconForStackCount>1</uiIconForStackCount>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+    </ingestible>
+  </ThingDef>
+<!-- To add recipes, Copy <ThingDef>, past new, and edit-->
+  <ThingDef ParentName="MealBase">
+    <defName>SteakAndVeg</defName>
+    <label>steak and vegitable</label>
+    <description>A meal made from steak and vegitables</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/SteakAndVeg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.25</DeteriorationRate>
+      <MarketValue>24</MarketValue>
+      <Mass>0.3</Mass>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+</Defs>

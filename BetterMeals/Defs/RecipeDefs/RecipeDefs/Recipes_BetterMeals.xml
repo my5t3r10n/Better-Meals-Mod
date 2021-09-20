@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef Name="CookBetterMeal" Abstract="True">
+        <fixedIngredientFilter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+          <specialFiltersToDisallow>
+            <li>AllowPlantFood</li>
+          </specialFiltersToDisallow>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+          <disallowedCategories>
+            <li>EggsFertilized</li>
+          </disallowedCategories>
+          <disallowedThingDefs>
+            <li>Meat_Human</li>
+            <li>Meat_Megaspider</li>
+            <li>InsectJelly</li>
+          </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <workSkill>Cooking</workSkill>
+      </RecipeDef>
+<!-- To add recipes, Copy <RecipeDef>, past new, and edit.-->
+<RecipeDef ParentName="CookBetterMeal">
+    <defName>CookMealSteakAndVeg</defName>
+    <label>cook steak and veg</label>
+    <description>Cook a meal with meat and vegitable</description>
+    <jobString>Cooking Better Meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>0.2</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.2</count>
+      </li>
+    </ingredients>
+    <products>
+      <SteakAndVeg>1</SteakAndVeg>
+    </products>
+    <skillRequirements>
+      <Cooking>4</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+
+</Defs>

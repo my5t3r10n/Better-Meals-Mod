@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ModMetaData>
+	<name>Better Meals Mod</name>
+	<author>MY5T3R10N</author>
+	<supportedVersions><li>1.0</li><li>1.2</li><li>1.3</li></supportedVersions>
+	<targetVersion><li>1.3</li></targetVersion>
+	<packageId>MY5T3R10N.BetterMeals.Specific</packageId>
+	<description>
+    Enjoy better and more realistic meals. No more cooking 10 steaks for 1 basic meal.
+	Still uses the same ingredients though requires fewer meat.   
+		</description>
+</ModMetaData>
